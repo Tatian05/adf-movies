@@ -1,0 +1,28 @@
+{
+	"name": "trigger_proccess_movies",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_proccess_movies",
+					"type": "PipelineReference"
+				},
+				"parameters": {
+					"p_environment": "Production",
+					"p_file_date": "2024-12-30"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Week",
+				"interval": 1,
+				"startTime": "2025-07-17T19:30:00Z",
+				"timeZone": "UTC"
+			}
+		}
+	}
+}
